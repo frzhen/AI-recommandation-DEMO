@@ -23,12 +23,11 @@ spring:
             api-key: ${MISTRAL_API_KEY}
             chat:
                 options:
-                    model: mistral-small-latest
+                    model: mistral-large-latest
                     temperature: 0.8
             embedding:
                 options:
                     model: mistral-embed
-                    encodingFormat: base64
         vectorstore:
             milvus:
                 client:
