@@ -1,3 +1,6 @@
+logging:
+    level:
+        guru.ysy.aiexpert: DEBUG
 jdk:
     vendor:
         name: Oracle-JDK
@@ -25,6 +28,7 @@ spring:
             embedding:
                 options:
                     model: mistral-embed
+                    encodingFormat: base64
         vectorstore:
             milvus:
                 client:
@@ -32,11 +36,11 @@ spring:
                     port: 19530
                     username: "root"
                     password: "milvus"
-                databaseName: "default"
-                collectionName: "vector_store"
-                embeddingDimension: 1536
-                indexType: IVF_FLAT
-                metricType: COSINE
+                database-name: "default"
+                collection-name: "vector_store"
+                embedding-dimension: 1024
+                index-type: IVF_FLAT
+                metric-type: COSINE
 ysy:
     aiapp:
         vectorStorePath: /tmp/vectorStore.json
