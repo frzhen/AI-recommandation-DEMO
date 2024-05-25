@@ -46,7 +46,7 @@ public class AiServiceImpl implements AiService {
         Message systemMessage = systemMessagePromptTemplate.createMessage();
 
         List<Document> documents = vectorStore.similaritySearch(
-                SearchRequest.query(question.question()).withTopK(4));
+                SearchRequest.query(question.question()).withTopK(8));
         List<String> contentList = documents.stream().map(Document::getContent).toList();
 
         PromptTemplate promptTemplate = new PromptTemplate(ragPromptTemplate);
