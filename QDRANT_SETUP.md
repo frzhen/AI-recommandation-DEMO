@@ -39,4 +39,8 @@ networks:
     default:
         name: qdrant
 ```
+3. add qdrant dependency(gradle Kotlin DSL):
+```kotlin dsl
+implementation("org.springframework.ai:spring-ai-qdrant-store-spring-boot-starter")
+```
 
