@@ -28,7 +28,7 @@ import java.util.Map;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class MistralAiServiceImpl implements MistralAiService {
+public class AiServiceImpl implements AiService {
 
     private final ChatClient chatClient;
 

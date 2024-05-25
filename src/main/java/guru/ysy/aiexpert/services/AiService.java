@@ -8,7 +8,7 @@ import guru.ysy.aiexpert.models.Question;
  * @Date: 2024/5/24 21:47
  * @Email: fred.zhen@gmail.com
  */
-public interface MistralAiService {
+public interface AiService {
 
     Answer getAnswer(Question question);
 }
