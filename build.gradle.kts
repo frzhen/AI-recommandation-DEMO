@@ -28,7 +28,7 @@ extra["tikaVersion"] = "1.0.0"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.ai:spring-ai-qdrant-store-spring-boot-starter")
+    implementation("org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter")
     implementation("org.springframework.ai:spring-ai-mistral-ai-spring-boot-starter")
     // OpenAPI
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${property("openAPIVersion")}")

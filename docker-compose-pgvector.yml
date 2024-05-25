@@ -1,0 +1,27 @@
+services:
+    pgvector:
+        container_name: pgvector
+        image: ankane/pgvector:latest
+        ports:
+            - 5432:5432
+        expose:
+            - 5432
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_DB=postgres
+        networks:
+            - default
+        volumes:
+            - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/pgvector/:/var/lib/postgresql/
+            - ${DOCKER_VOLUME_DIRECTORY:-.}/src/main/resources/sql/pgvector-init.sql:/docker-entrypoint-initdb.d/init.sql
+        healthcheck:
+            test: ["CMD", "pg_isready"]
+            interval: 30s
+            start_period: 90s
+            timeout: 20s
+            retries: 3
+
+networks:
+    default:
+        name: pgvector
