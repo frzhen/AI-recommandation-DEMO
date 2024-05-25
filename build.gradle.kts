@@ -30,6 +30,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter")
     implementation("org.springframework.ai:spring-ai-mistral-ai-spring-boot-starter")
+
+    // jdbc
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    // postgresql
+    implementation("org.postgresql:postgresql")
     // OpenAPI
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${property("openAPIVersion")}")
 

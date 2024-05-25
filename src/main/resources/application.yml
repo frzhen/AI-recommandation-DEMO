@@ -18,6 +18,10 @@ spring:
             enabled: always
     config:
         import: classpath:env/Mistral.env[.properties]
+    datasource:
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: postgres
     ai:
         mistralai:
             api-key: ${MISTRAL_API_KEY}
@@ -29,10 +33,10 @@ spring:
                 options:
                     model: mistral-embed
         vectorstore:
-            qdrant:
-                host: "localhost"
-                port: 6334
-                collection-name: "vector-store"
+            pgvector:
+                index-type: HNSW
+                distance-type: COSINE_DISTANCE
+                dimensions: 1024
 ysy:
     aiapp:
         vectorStorePath: /tmp/vectorStore.json
