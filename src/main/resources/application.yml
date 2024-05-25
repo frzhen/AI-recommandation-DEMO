@@ -29,17 +29,10 @@ spring:
                 options:
                     model: mistral-embed
         vectorstore:
-            milvus:
-                client:
-                    host: "localhost"
-                    port: 19530
-                    username: "root"
-                    password: "milvus"
-                database-name: "default"
-                collection-name: "vector_store"
-                embedding-dimension: 1024
-                index-type: IVF_FLAT
-                metric-type: COSINE
+            qdrant:
+                host: "localhost"
+                port: 6334
+                collection-name: "vector-store"
 ysy:
     aiapp:
         vectorStorePath: /tmp/vectorStore.json
