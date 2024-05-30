@@ -47,7 +47,7 @@ public class LoadVectorStore implements CommandLineRunner {
                 vectorStore.add(splitDocs);
             });
         }
-        log.debug("Vector store loaded.");
+        log.info("Vector store loaded.");
     }
 
 }

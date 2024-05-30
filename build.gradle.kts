@@ -41,6 +41,7 @@ dependencies {
     // Tika document reader
     implementation("io.springboot.ai:spring-ai-tika-document-reader:${property("tikaVersion")}")
 
+    // lombok for implementation
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
 
