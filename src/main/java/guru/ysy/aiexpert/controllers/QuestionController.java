@@ -6,6 +6,7 @@ import guru.ysy.aiexpert.services.AiService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,7 +21,7 @@ public class QuestionController {
     private final AiService aiService;
 
     @PostMapping("/ask")
-    public Answer question(Question question) {
+    public Answer question(@RequestBody Question question) {
         return aiService.getAnswer(question);
     }
 }
